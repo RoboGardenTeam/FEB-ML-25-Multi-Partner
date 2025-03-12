@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 # Load the Iris dataset (common built-in dataset)
 iris = datasets.load_iris()
 X = iris.data[:, :2]  # Use only the first two features for simplicity
+print(X[:10, :])
 y = (iris.target == 0).astype(int)  # Binary classification: Class 0 vs Not Class 0
 
 # Split dataset
@@ -22,6 +23,7 @@ class ManualLinearRegression:
         self.weights = None
         self.bias = None
         self.errors = []
+        #y = mX + b
 
     def fit(self, X, y):
         n_samples, n_features = X.shape

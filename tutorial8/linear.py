@@ -29,7 +29,6 @@ class ManualLinearRegression:
         n_samples, n_features = X.shape
         self.weights = np.zeros(n_features)
         self.bias = 0
-
         for _ in range(self.epochs):
             y_predicted = np.dot(X, self.weights) + self.bias
             error = y_predicted - y
